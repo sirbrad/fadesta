@@ -1,4 +1,1 @@
-fadesta
-=======
-
-Another jQuery fading plugin
+`git clone` the shit outta this!
