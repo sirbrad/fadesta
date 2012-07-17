@@ -1,1 +1,3 @@
-`git clone` the shit outta this!
+# Another jQuery fading plugin
+
+No docs yet!
