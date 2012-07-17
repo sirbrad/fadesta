@@ -11,11 +11,10 @@
 	background-repeat:no-repeat;
 	position: absolute;
 	display: block;
-	height: 710px;
+	height: 300px;
 	opacity: 0;
 	top:0;
 	width: 100%;
-	min-width: 1020px;
 	z-index: 2;
 	
 	-webkit-transform: translateZ(0);
