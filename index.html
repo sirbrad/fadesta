@@ -1,0 +1,37 @@
+<!doctype html>
+<!--[if IE 8]><html class="no-js ie8" lang="en"><![endif]-->
+<!--[if IE 9]><html class="no-js ie9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>Fadesta Demo</title>
+    <meta name="author" content="sirBrad" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="fadesta.css" />
+</head>
+<body>	
+	<div class="stage js-stage">
+		<i class="stage__item" data-bkg="http://cambelt.co/400x300/Colors?color=25d54e"></i>
+		<i class="stage__item" data-bkg="http://cambelt.co/400x300/Colors?color=eeeeee"></i>
+		<i class="stage__item" data-bkg="http://cambelt.co/400x300/Colors?color=000000"></i>
+    </div>
+    <script src="jquery.js"></script>
+    <script src="fadesta.jquery.js"></script>
+    <script>
+	    
+	    $('.js-stage').fadesta({
+			delay: 4000,
+			navigation: {
+				parent: 'navigation',
+				next: 'nav-next',
+				prev: 'nav-prev'
+			},
+			pagination: {
+				parent: 'cpag',
+				highlight: 'is-highlight'
+			}
+		});
+	    
+    </script>
+</body>
+</html>
