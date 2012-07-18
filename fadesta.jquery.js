@@ -1,5 +1,6 @@
 (function($) {
 	
+	
 	$.fn.fadesta = function(options) {
 	
 		var $this = this,
@@ -75,7 +76,7 @@
 		
 		// Apply background
 		$.each(items, function(i){
-			
+		
 			// Set our background-image relevant to our data-attr
 			// Add identifier class "item--[identifier]"
 			$(this)
@@ -98,8 +99,9 @@
 					<a href="#" class="' + settings.navigation.parent + '__item ' + settings.navigation.prev + '">Previous</a>\
 					<a href="#" class="' + settings.navigation.parent + '__item ' + settings.navigation.next + '">Next</a>\
 				');
-				
-			$this.append(navigation);
+			
+			// If user wants to append to a different element
+			(settings.navigation.append) ? $('.' + settings.navigation.append).append(navigation) : $this.append(navigation);
 		}
 		
 		// Create Pagination
@@ -120,8 +122,10 @@
 			$(pagination)
 				.addClass(settings.pagination.parent)
 				.html(html);
-				
-			$this.append(pagination);
+						
+			// If user wants to append to a different element
+			(settings.pagination.append) ? $('.' + settings.pagination.append).append(pagination) : $this.append(pagination);
+			
 		}
 		
 		// Fade-in inital image
@@ -148,8 +152,6 @@
 			count = parseInt(targ.attr('data-id'), 10) -1; // we know our fade function increments
 			
 			fade();
-			
-			//(targ.hasClass(settings.navigation.prev)) ? fade('previous') : fade('next');
 
 			e.preventDefault();
 		});
