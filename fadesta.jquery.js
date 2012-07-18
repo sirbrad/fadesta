@@ -41,6 +41,10 @@
 				if (settings.pagination) {				
 					menuhighlight(count);	
 				}
+				
+				if (settings.callback) {
+					settings.callback.call(this, $this.find('.item--' + count));
+				}
 
 				return count;
 				
